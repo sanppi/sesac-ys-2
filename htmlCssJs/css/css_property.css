@@ -1,0 +1,75 @@
+/* px, em, rem, % */
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root { 
+    font-size: 16px;
+}
+
+.font-css {
+    font-size: 1.5em;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-style: normal;
+}
+
+.parent {
+    font-size: 30px;
+}
+
+.child-font {
+    font-size: 1.5rem;
+}
+
+.width-css {
+    background-color: blue;
+    color: white;
+    display: inline-block;
+    width: 500px;
+    max-width: 100%;
+    /* height: ;
+    min-height: ;
+    max-height: ; */
+}
+
+.border-css {
+    border: 1px solid red;
+    border-radius: 10px;
+    /* border-color: red;
+    border-width: 1px;
+    border-style: dashed; */
+}
+
+.circle {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+/* 두 개 쓸 때는 px 앞은 위 아래, 왼쪽 오른쪽 */
+/* 네 개 쓸 떄는 위쪽, 오른쪽, 아래쪽, 왼쪽 */
+.margin-css {
+    margin: 10px 20px 30px 40px;
+    border: 2px solid black;
+    background-color: blue;
+    color: white;
+    padding: 50px 20px;
+}
+
+.box-css {
+    background-color: blueviolet;
+    box-sizing: border-box;
+    width:200px;
+    height: 200px;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+}
