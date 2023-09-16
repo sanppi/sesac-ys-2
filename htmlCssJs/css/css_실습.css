@@ -1,0 +1,21 @@
+* {
+    color: white;
+    background-color: gray;
+}
+
+/* 태그 선택자 */
+span {
+    background-color: red;
+}
+
+/* 아이디 선택자 */
+#first {
+    background-color:blue;
+}
+
+/* 클래스 선택자 */
+.second {
+    background-color:green;
+}
+
+
