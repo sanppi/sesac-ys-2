@@ -3,9 +3,9 @@
 }
 
 /* 태그 선택자 */
-div {
+/* div {
     background-color: aqua;
-}
+} */
 
 /* 클래스 선택자 */
 .orange {
@@ -21,3 +21,24 @@ div {
     color:red;
 }
 
+/* div 태그 하위에 있는 apple이라는 클래스를 선택하겠다 */
+/* 하위 선택자 */
+div .apple{
+    color: rgba(255, 0, 0, 0.345)
+}
+
+/* 자식 선택자 */
+/* div > .apple{
+    color: red;
+} */
+
+/* 인접 형제 선택자 */
+h1 + ul > li {
+    font-size: 20px;
+}
+
+
+/* 일반 형제 선택자 > 다음에 있는 걸 다 선택하겠다..?*/
+h1 ~ ul > li {
+    font-size: 20px;
+}

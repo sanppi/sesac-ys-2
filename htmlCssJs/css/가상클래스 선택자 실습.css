@@ -1,0 +1,21 @@
+.div-hover:hover {
+    color: blue;
+}
+
+.div-active:active {
+    background-color: blue;
+}
+
+.input-focus:focus {
+    background-color: orange;
+}
+
+.stripes div:nth-child(2n+1){
+    background-color: navy;
+    color: white;
+}
+
+.stripes div:nth-child(2n){
+    background-color: yellow;
+    color: black;
+}
