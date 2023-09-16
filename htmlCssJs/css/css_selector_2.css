@@ -40,3 +40,42 @@
 .fruits *:not(span) {
     background-color: aqua;
 }
+
+/* before */
+div.before-el::before {
+    content: "앞!";
+}
+
+/* after */
+div.after-el::after {
+    content: "hot";
+    color: white;
+    background-color: red;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+input[name=name] {
+    background-color: orange;
+}
+
+.wm-3{
+    color: red;
+}
+
+.fruits-3 > .wm-3 {
+    color: blue;
+}
+
+
+input[disabled] {
+    background-color: red;
+}
+
+input[placeholder=이름] {
+    background-color: orange;
+}
+
+input:not([placeholder]) {
+    background-color: blue;
+}
