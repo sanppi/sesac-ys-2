@@ -1,0 +1,84 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+
+.container-1 {
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-2 {
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    }
+
+.container-3 {
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container-4 {
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.container-5 {
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-6 {
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.item1 {
+    background-color: red;
+}
+.item2 {
+    background-color: orange;
+}
+.item3 {
+    background-color: yellow;
+}
+.item4 {
+    background-color: green;
+}
+.item5 {
+    background-color: blue;
+}
+.item6 {
+    background-color: navy;
+}
+.item7 {
+    background-color: blueviolet;
+}
+.item8 {
+    background-color: skyblue;
+}

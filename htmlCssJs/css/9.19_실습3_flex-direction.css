@@ -1,0 +1,44 @@
+
+.container-1 {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    margin: 20px;
+}
+
+.container-2 {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    margin: 20px;
+}
+
+.container-3 {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    margin: 20px;
+}
+
+.item-1 {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+
+.item-2 {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+
+.item-3 {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
