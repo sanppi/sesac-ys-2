@@ -1,0 +1,32 @@
+img {
+    width: 200px;
+}
+
+.img-skew:active {
+    /* transform: skewX(50deg); */
+    transform: skew(50deg, 50deg);
+}
+
+.img-rotate:active {
+    transform: rotateY(40deg);
+}
+
+.img-scale:active {
+    transform: scale(2);
+}
+
+.img-translate:active {
+    transform: translate(10px, 10px);
+}
+
+.img-transform:active {
+    width: 500px;
+    transform: perspective(150px) rotateY(40deg);
+    transition: transform 2s linear 2s;
+}
+
+.img-width:active {
+    width: 500px;
+    transition: 2s;
+}
+
