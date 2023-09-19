@@ -1,0 +1,55 @@
+/* div {
+    display: block;
+} */
+
+.box {
+    background-color: black; 
+    width:100px; 
+    height:100px;
+    color: white;
+    margin:5px;
+    text-align: center;
+    line-height: 100px;
+}
+
+
+/* inline: width, height, margin(top, bottom) 무용지물 */
+/* inline-block: inline과 block의 특징을 합쳐놓음 (inline:contents의 크기만큼만 공간을 차지 / block: width, height, margin 정상 작동*/
+
+.d-inline-block {
+    display: inline-block;
+    padding:20px; 
+}
+
+/* flex: (여기서는 container의) 자식 요소(하위 요소 아님 주의)를 inline-block으로 만듦 */
+.container{
+    display: flex;
+    height: 500px;
+    flex-direction: column-reverse;
+}
+
+.container-2 {
+    /* flex-wrap, justify-content */
+    display: flex;
+    /* flex-direction: column; */
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container-3 {
+    /* flex-wrap, justify-content */
+    display: flex;
+    /* flex-direction: column; */
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: flex-start;
+    margin-top: 20px;
+}
