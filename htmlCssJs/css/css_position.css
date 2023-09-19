@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+}
+
+/* relative */
+.box {
+    /* static이 기본값 */
+    /* position: static; */
+    width: 100px;
+    height: 100px;
+}
+
+.box-red {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: red;
+}
+
+.box-orange {
+    position: relative;
+    top: 20px;
+    /* bottom: 20px; */
+    /* left: 20px; */
+    right: 20px;
+    background-color: orange;
+}
+
+.box-yellow {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    background-color: yellow;
+}
+
+.sm-box{
+    width: 50px;
+    height: 50px;
+}
+
+.box-green {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: green;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background-color: blue;
+}
+
+/* 부모 요소는 자식 요소 위로 올 수 없음 */
+.container {
+    position: relative;
+    height: 200px;
+    z-index: 999;
+    background-color: blue;
+}
+
+.item {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.red {
+    /* z-index: 1; */
+    z-index: 2;
+    background-color: red;
+}
+
+.orange {
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+    background-color: orange;
+}
+
+.yellow {
+    top: 40px;
+    left: 40px;
+    background-color: yellow;
+}
