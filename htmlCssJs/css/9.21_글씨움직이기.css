@@ -1,0 +1,16 @@
+.letter {
+    position: relative;
+    animation: movetoleft 3s;
+}
+
+
+@keyframes movetoleft {
+    from {
+        width:300%;
+        left: 300px;
+    }
+
+    to {
+        width: 100%;
+        left: 0;
+    }

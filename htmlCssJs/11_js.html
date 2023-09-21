@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+
+</head>
+<body>
+    <script>
+        //콘솔에 출력을 하겠다. 콘솔은 브라우저에 있음. 보통 버그를 잡을 때는 사용자한테 안보이는 콘솔 사용.
+        console.log("hello");
+
+        //alert 창에 출력을 하겠다.
+        // alert("hello");
+    
+        // 키워드(var/let/const) 변수이름  = 값;
+        var name = "sanha";   // 선언과 할당을 동시에 한 문법
+        var name2;            // 변수의 선언부
+        name2 = "sanha";      // 할당부
+       
+        // var : 재선언 가능, 재할당 가능
+        var name;             // name이라는 변수가 재선언 됨.
+        name = "sanha 1";
+        name = "sanha 2";     // 재할당
+
+        // let : 재선언 불가능, 재할당 가능
+        let name3 = "lily 3";
+        name3 = "lily 4";
+
+        //const : 재선언 불가능, 재할당 불가능 (선언할 때 할당도 필수)
+        const name4 = "lily 5";
+
+        console.log(name, name2, name3, name4)
+
+        let age = 99;
+
+        console.log( "hello", age )
+        console.log( name4 + age )
+        console.log( "hello" + age )
+        console.log(`hello ${name4} bye bye`) // 문자열과 변수를 동시에 쓰고 싶을 때
+    </script>
+
+</body>
+</html>
