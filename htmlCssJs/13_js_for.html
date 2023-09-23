@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 반복문</title>
+</head>
+<body>
+    <script>
+
+            // for문 while문 차이
+            // for문: 반복할 횟수를 특정할 수 있을 때
+            // while문: 반복할 횟수를 특정할 수 없을 때
+            for(let i=0; i<10; i++){
+                console.log(i);
+            
+                // if(i==5) break;
+            }
+
+            let i=0; // 초기식
+            while(i<10) { // 조건
+                // 조건이 true일 경우 실행할 명령문
+                console.log(i);
+                i++; // 증감문
+                let j= 0;
+                while(j<10){
+                    console.log(j);
+                    j++;
+                }
+            }
+
+            //let number = Number(prompt("양수를 입력하세요"))
+            //while(number < 0) {
+            //    number = Number(prompt("양수를 입력하세요"))
+            //}
+
+            //while(true) { -> 의도적으로 무한 반복문을 만든 것. 그리고 break 무조건 있어야 끝남.
+            //    let number = Number(prompt("양수를 입력하세요"))
+            //    if(number > 0) break; // 반복문 강제로 종료 시킴
+            //    console.log("hello")
+            //}
+            //console.log("끝")
+
+            //continue; 
+            for(let i=0; i<10; i++) {
+                if(i%2 == 0) continue;
+                console.log(i);
+
+                // continue를 만나면 이 지점으로 jump, console이 안 찍힘.
+            }   
+            
+            // 조건에 안 맞으면 실행 안 됨
+            // while(조건) {
+                // 명령문
+            // }
+
+            // while과 문법은 동일하지만 처음 한 번은 일단 실행시킴
+            // do { 
+                // 명령문
+            //    number = Number(prompt("양수를 입력하세요"))
+            // } while(number<0) // ....??????
+
+            let fruits = ["apple", "banana", "grape"];
+           // console.log(fruits[0])
+           // console.log(fruits[1])
+           // console.log(fruits[2])
+
+            for(let j=0; j<fruits.length; j++)
+            console.log(fruits[j])
+
+            // for / of 문
+            // fruit은 변수 새로 만든 것. apple이라는 값을 fruit에 담는 것.
+            // let 변수이름 of 배열(위에서 선언해둔)
+            for(let fruit of fruits){
+                console.log(fruit);
+            }
+
+            // 함수 : (재사용 가능성이 있는) 특정 기능을 묶어둠
+            
+            // class (객체) -> 배열도 객체에 속함. 
+            // 메소드 : 함수에 속함. 
+            // but, 조건이 하나 붙음. 객체 내에 선언되어 있는 함수
+
+            //const cat = {
+            //   name: "나비", 
+            //    age: "80"
+            //    mew: function(){
+            //       console.log("야ㅇ옹")
+            //   }
+            //}
+            
+            //cat.mew();
+
+
+            // forEach함수 문법 : 배열.forEach()
+            // 배여ㅛㄹ의 원소를 순차적으로 탐색함.
+            let fruits2 = ["apple", "banana", "grape"];
+            fruits2.forEach((fruit, index, array)=>{
+                // 첫번째 매개변수: 탐색된 원소
+                // 두번째 매개변수: 인덱스
+                // 세번째 매개변수: 배열(fruits2의 내용) 그 자체가 그대로 들어옴 
+                console.log(fruit)   
+                console.log(index) 
+                console.log(array)          
+            })
+
+            fruits2.forEach((f, i, a)=>{
+
+            })
+
+            fruits2.forEach(function() {
+
+            })
+
+            let numbers = []
+            for(let k = 1; k<=100; k++){
+                numbers.push(k) 
+            // 배열(numbers)의 마지막에
+            // 인자로 넘어간 값(k)를 추가하기
+            }
+
+
+
+
+
+    </script>
+</body>
+</html>

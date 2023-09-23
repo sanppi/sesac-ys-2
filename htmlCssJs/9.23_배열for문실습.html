@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    let numbers = []
+    for(let i = 1; i<=100; i++){
+        numbers.push(i) 
+        // 배열(numbers)의 마지막에
+        // 인자로 넘어간 값(i)를 추가하기
+        }
+
+    let sum1 = 0;
+    let sum2 = 0; 
+    let sum3 = 0; 
+
+    for(let i = 0; i < numbers.length; i++){
+        sum1 = sum1 + numbers[i]
+    }
+
+    for(let num of numbers) {
+        sum2 = sum2 + num;
+    }
+
+    numbers.forEach((num) => {
+        sum3 = sum3 + num;
+    });
+
+    console.log(sum1, sum3, sum3)
+
+    </script>
+</body>
+</html>
