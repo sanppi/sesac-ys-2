@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = 5;
+        let num2 = num;
+        num2 += 5;
+        console.log(num, num2) 
+        // num값을 복사해서 num2에 넣는 것, num과 num2는 서로 다른 공간임. 그래서 5와 10이 나온 것.
+        // "깊은 복사"  
+        
+        //예시
+        var arr3 = [1,2,3,4]
+        var arr4 = arr3.slice(); // 반환값 가지려고. arr3을 참조하는 게 아니라 잔여물이 남게 됨.         
+        arr4.reverse()
+        console.log(arr3, arr4) // 서로 다른 공간, 다른 값을 출력하게 된다. [1,2,3,4] <-> [4,3,2,1]
+
+
+        let arr = [1,2,3,4,5];
+        let arr2 = arr;
+        arr2.reverse()
+        console.log(arr, arr2)
+        // array도 같이 reverse 됐음. 값이 복사 되는 게 아님.
+        // array의 공간에 부여된 주솟값을 array2에 저장한다, 전달한다라고 생각하면 됨 
+        // array와 array2는 결국 같은 공간을 바라보게 됨. 
+        // 변수 2개 식별자가 같은 공간을 바라보고 있기 때문에 arr2를 바꿔도 arr도 바뀜. 
+        // "얕은 복사" : 복사한 척을 하는 것
+
+        let date = new Date(); //날짜를 객체로 반환
+        console.log(date.getFullYear());
+        console.log(date.getMonth()+1); //이번달 나오게 하려면 +1 해줘야 함.
+        console.log(date.getDate());
+        console.log(date.getDay()); //요일을 숫자로 알려줌. 토요일=6
+        console.log(date.getTime()); //밀리초
+        console.log(date.getHours()); 
+
+        //만료일 -> date 객체로 지났는지 알 수 있음
+        let expired = new Date("2023-09-22").getTime();
+        let today = new Date().getTime();
+
+        if(expired < today) {
+            console.log("만료일이 지났어요ㅜㅜ")
+        } else {
+            console.log("사용할 수 있어요")
+        }
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

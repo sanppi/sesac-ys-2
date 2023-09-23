@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let numbers = []
+        for(let i = 1; i<=10; i++){
+            numbers.push(i) 
+            // 배열(numbers)의 마지막에
+            // 인자로 넘어간 값(i)를 추가하기
+            }
+        console.log(numbers)
+        
+        // .pop() : 마지막 값
+        numbers.pop()
+        console.log("pop",numbers)
+
+        // .shift() : 배열 앞 요소 제거
+        numbers.shift()
+        console.log("shift",numbers)    
+
+        // .unshift(): 배열 앞에 추가
+        numbers.unshift(10)
+        console.log("unshift",numbers)    
+
+
+        console.log("includes", numbers.includes(1))
+
+        console.log("indexOf 5", numbers.indexOf(5))   // 5의 인덱스인 4를 반환
+        console.log("indexOf 1", numbers.indexOf(1))   // 없으면 -1 나옴
+
+            
+        numbers.reverse()
+        console.log("reverse", numbers)
+
+        // [1,2,3].join("") // 123
+
+        console.log(["a", "p", "p", "l", "e"].join(","))
+        console.log("join", numbers.join(""))
+    
+
+
+        // 문자열 관련 메소드!
+        let str = "Happy day~! ";
+        console.log ("length", str.length)
+
+        // jabascript => ~~~~~
+        // 검색창에 javascript JavaScript 라고 사용자가 입력 
+        // -> 같은 글자를 입력했는데 대소문자에 따라서 다른 문자열이 됨. 그러나 같은 결과값을 보여줘야 함.
+        console.log("대문자: ", str.toUpperCase())
+
+        console.log(str.slice(5,9))
+        console.log(str.slice(2))
+
+        //replace는 첫 문자열 하나만, replaceAll은 그 문자열 나온 건 다
+
+        console.log(str.repeat(3))
+
+
+    
+        str.split('\n')
+        console.log(str.split(' '))
+
+        'hello'.split("").reverse().join("")
+        console.log('hello'.split("").reverse().join(""))   
+
+        let yaho = ' 야 호 야호!!~~ ';
+        console.log(yaho.split('').reverse().join(""))   
+        
+        // 함수에 반환값이 있다?
+
+        function split() {
+            let arrr;
+            // 문자열을 자르는 코드
+            arrr = ["", "", ""]
+            return arrr
+        }
+
+        // 'hello'라고 잔여물이 남음
+
+        //let variable = funcName()
+
+
+        // str.split(" ").reverse() 아래랑 똑같음
+        ["", "", ""].split("")
+
+        numbers.push(50) // 추가하고 끝남.. 잔여물로 배열이 없어서..?
+
+        </script>
+</body>
+</html>
