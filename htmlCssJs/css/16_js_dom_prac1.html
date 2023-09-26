@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기 만들기 실습</title>
+</head>
+<body>
+    <form>
+    <div>값1: <input type="number" id="value1"></div>
+    <div>값2: <input type="number" id="value2"></div>
+    <div>연산자: <input type="text" id="operator"></div>
+    <div>결과: <input type="number" id="result" readonly ></div> 
+    <!-- readonly: 사용자가 읽기만 하고 값을 못바꿈 -->
+
+    <button type="button" onclick="calc()">계산하기</button>
+    <!-- <button type="button" onclick="resetCalc()">초기화</button> -->
+    <input type="reset" value="초기화"/> 
+    <!-- 위의 걸로도 초기화 버튼이 기본적으로 제공됨 -->
+    </form>
+
+    <script>
+        // let value1 = document.
+        function calc() {
+            const value1 = Number(document.getElementById("value1").value);
+            const value2 = Number(document.getElementById("value2").value);
+            const oper = document.getElementById("operator").value;
+
+            let result = value1+value2;
+            switch(oper) {
+                case "+":
+                    result = value1+value2
+                    break;
+                
+                case "-":
+                    result = value1-value2
+                    break;
+                case "*":
+                    result = value1*value2
+                    break;
+                case "/":
+                    result = value1/value2
+                    break;
+            }
+
+            document.getElementById("result").value = result;
+        }
+
+        function resetCalc() {
+            document.getElementById("value1").value = "";
+            document.getElementById("value2").value = "";
+            document.getElementById("operator").value = "";
+            document.getElementById("result").value = "";
+        }
+    </script>
+</body>
+</html>
