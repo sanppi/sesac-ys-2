@@ -57,11 +57,16 @@
 
         function getData(){
             const form = document.forms['register']; 
+            // document.forms = {
+            //     register: <form></form>
+            //     login:: <form></form> 
+            // }
 
-            const interest = [];
+            const interest = []; // if가 true일 때, 담을 빈 배열을 만들어 둔 것. 
             
             for (let input of form.interest){
-                if (input.checked) interest.push(input.value);
+                // input의 type이 radio 이거나 checkbox인 경우 input의 속성으로 checked라는 게 존재
+                if (input.checked) interest.push(input.value); // input의 value를 push 함. 
             }
 
             const data= {
@@ -70,7 +75,7 @@
                 year: form.year.value,
                 month: form.month.value,
                 day: form.day.value,
-                interest: interest,
+                interest: interest, // 배열을 interest라는 key에 담아서 back에 넘김. 
             }
 
             return data;
@@ -83,13 +88,15 @@
             axios({
                 method: "GET",
                 url: "/axios",
-                params: data, 
+                params: data, // axios의 get은 데이터를 params에 담아서 요청해야 함. 
             }).then((res)=>{
                 console.log("res", res)
                 console.log("res.data", res.data) 
-                const {name} = res.data
+                const {name} = res.data // 객체 구조 분해 할당.
                 $("#result").html(`${name}님 환영합니다.`)
             
+            }).catch((err)=>{
+                console.log(err)
             })
         }
 
@@ -99,6 +106,9 @@
                 id: form.id.value,
                 pw: form.pw.value,
             }
+
+            //console.log(data) : 1차적으로 데이터 잘 만들어졌는지 확인
+
             return data;
         }
 

@@ -39,7 +39,6 @@ app.post("/axios", function(req, res) {
     if (req.body.id == id && req.body.pw == pw) {
         res.send("success");
     }  else res.send("faild");
-
 });
     
     
