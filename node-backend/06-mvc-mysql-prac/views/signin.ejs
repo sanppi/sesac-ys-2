@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title>로그인</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300&amp;display=swap'>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" href="/static/css/user.css">
+
+    <script>
+      function login() {
+        // api 명세서에 있다고 가정
+        // POST / user/signin에 로그인 하면 됨. 
+        // 담아서 보내는 것은 {userid, pw}. 응답:{result(boolean), id?} > true일 경우 id는 올수도 안 올수도. 
+        const form = document.forms["form-login"];
+        const data = {
+            userid: form.userid.value,
+            pw: form.pw.value
+        }
+
+        // if (!form.checkValidity()) {
+        //   form.reportValidity();
+        //   console.log("reportValidity");
+
+        //   return false;
+        // }
+        // let user = {
+        //   userid: form.userid.value,
+        //   pw: form.pw.value
+        // };
+
+        axios({
+          method: 'post',
+          url: '/user/signin',
+          data: data
+        }).then((res) => { // 응답을 받음. 
+          if (res.data.result == true) {
+            alert("로그인 성공");
+            const formInfo = document.forms["form-info"];
+            formInfo.id.value = res.data.id; // 서버의 응답으로 온 아이디(res.data.result)로 채워주겠다..?
+            formInfo.submit();
+          } else {
+            alert("로그인 실패");
+            // form.reset();
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="scene flex">
+      <section class="card">
+        <h1 class="card__heading">
+          <span> Welcome</span>
+        </h1>
+        <!-- 일반 폼 전송. action="/user/profile"인 이유가 프로필 페이지로 렌더하는 것 -->
+        <form name="form-info" action="/user/profile" method="POST">
+          <input type="hidden" name="id"> 
+        </form>
+        <form class="card__form" name="form-login">
+          <label for="ID" class="visually">ID :</label>
+          <div><input id="ID" class="card__input" type="text" name="userid" required /></div>
+          <label for="password" class="visually">Password :</label>
+          <input id="password" class="card__input" type="password" name="pw" required />
+          <button class="card__button" type="button" onclick="login();">
+            <span>Login</span>
+          </button>
+        </form>
+
+        <a href="/user/signup">Register</a>
+      </section>
+    </div>
+  </body>
+</html>
