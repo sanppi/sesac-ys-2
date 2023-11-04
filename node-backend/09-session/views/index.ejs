@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <% if (user) { %>
+          <form action="/logout" method="get">
+            <button type="submit">로그아웃</button>
+          </form>
+          <div>여기는 Home입니다!</div>
+          <div><%= user %>님 환영합니다.</div>
+        <% } else { %>
+          <a href="/login">로그인</a>
+          <div>여기는 Home입니다!</div>
+          <div>로그인을 해주세요.</div>
+        <% } %>
+      </nav>
+      </header>
+</body>
+</html>
