@@ -2,4 +2,5 @@
 
 새싹 용산캠 2기 수업
 
-- git branch test
+- git branch test (ex. 로그인 ui 완료)
+- git branch test (ex. 로그인 api)
