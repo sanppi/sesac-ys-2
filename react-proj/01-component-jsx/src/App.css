@@ -1,0 +1,39 @@
+/* BEM 네이밍 규칙 */
+/* .FuncCompoonent__test-css--active {} */
+
+.test-css {
+  background-color: yellow;
+  font-size: 30px;
+}
+
+.title {
+  background-color: orange;
+  text-align: center;
+}
+
+.Section__section {
+  margin-bottom: 20px;
+  border: 2px solid blue;
+}
+
+.Section__title {
+  color: red;
+}
+
+.Food__section {
+  color: red;
+}
+
+.Book__section {
+  background-color: yellowgreen;
+  text-align: center;
+  color: blue;
+}
+
+.Book__best {
+  color: orange;
+}
+
+.Book__title {
+  color: black;
+}
