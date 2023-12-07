@@ -1,0 +1,14 @@
+@mixin aaaa($id, $pos) {
+  @keyframes ani#{$id} {
+    from {
+      top: 0px;
+    }
+    to {
+      top: $pos;
+    }
+  }
+}
+
+@include aaaa(1, 30px);
+@include aaaa(2, 50px);
+@include aaaa(3, 100px);

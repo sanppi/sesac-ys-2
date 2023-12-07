@@ -1,0 +1,23 @@
+// _ -> 언더바로 되어 있는 애는 component에서 호출하지 않음.
+
+// 태블릿일 때는 768px
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin aaaa($id, $pos) {
+  @keyframes ani#{$id} {
+    from {
+      top: 0px;
+    }
+    to {
+      top: $pos;
+    }
+  }
+}
+
+@include aaaa(1, 30px);
+@include aaaa(2, 50px);
+@include aaaa(3, 100px);

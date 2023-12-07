@@ -1,0 +1,56 @@
+@mixin body-size($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  position: absolute;
+}
+
+@mixin body($color, $top, $left) {
+  background-color: $color;
+  top: $top;
+  left: $left;
+}
+
+.larva {
+  position: relative;
+
+  .eye-white {
+    @include body-size(35px);
+    @include body(white, 20px, 20px);
+  }
+
+  .eye-black {
+    @include body-size(20px);
+    @include body(black, 3px, 0px);
+  }
+}
+
+.body {
+  @include body-size(100px);
+
+  &.body1 {
+    @include body(rgb(0, 0, 166), 100px, 100px);
+  }
+
+  &.body2 {
+    @include body(rgb(36, 61, 206), 150px, 160px);
+  }
+
+  &.body3 {
+    @include body(rgb(52, 118, 231), 190px, 200px);
+  }
+  &.body4 {
+    @include body(rgb(47, 146, 233), 240px, 220px);
+    z-index: 8;
+  }
+  &.body5 {
+    @include body(rgb(140, 191, 253), 280px, 280px);
+    z-index: 10;
+  }
+}
+
+.larva .grass {
+  position: absolute;
+  top: 260px;
+  left: 0;
+}
