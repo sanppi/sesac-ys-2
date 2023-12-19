@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소켓</title>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <h3>소켓 연습</h3>
+    <button onclick="hello()">hello</button>
+    <button onclick="entry()">entry</button>
+    <br />
+    <h1>Hello World !</h1>
+    <button onclick="hello1()">hello</button>
+    <button onclick="study()">study</button>
+    <button onclick="bye()">bye</button>
+    <p id="text"></p>
+
+    <script>
+      // 클라이언트에서 소켓 열기. connectin 일어나는 곳.
+      const socket = io()
+      // 소켓을 이용해 데이터 전송하는 함수 : emit
+      // 소켓을 이용해 데이터를 수신하는 이벤트 : on
+
+      function hello() {
+        //   (전송할 이벤트 이름(필수값)[, 전송할 데이터]) 
+        //   전송할 데이터의 형태는 자유롭게 (문자열, 숫자, 객체 다 가능함.) 
+        socket.emit("hello", {
+          msg: "안녕하세요~"
+        })
+      }
+
+      // function hello 밖에 빼둠! 
+      // 왜냐면 함수 안에 들어가면 이벤트가 또 등록됨. 그러면서 console2,3,4,...번찍히게 돰.
+      // 여러번 호출시킬 함수에는 event인 on을 등록해두면 안됨
+      socket.on("bye", (res) => {
+        console.log(res)
+      })
+
+      function entry() {
+        socket.emit("entry")
+      }
+
+      socket.on("notice", (res) => {
+        alert(res.msg)
+      })
+
+      // 실습 1
+
+      function hello1() {
+
+        socket.emit("hello1", {
+          msg: "안녕하세요~"
+        })
+      }
+
+      socket.on("hellores", (res) => {
+        document.getElementById('text').innerHTML = res.msg
+      })
+
+      function study() {
+        socket.emit("study", {
+          msg: "공부합시다"
+        })
+      }
+
+      socket.on("studyres", (res) => {
+        document.getElementById('text').innerHTML = res.msg
+      })
+
+      function bye() {
+        socket.emit("bye", {
+          msg: "잘가"
+        })
+      }
+
+      socket.on("byeres", (res) => {
+        document.getElementById('text').innerHTML = res.msg
+      })
+    </script>
+
+  </body>
+</html>
